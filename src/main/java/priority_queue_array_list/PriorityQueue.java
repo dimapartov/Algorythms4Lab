@@ -36,14 +36,11 @@ public class PriorityQueue<E extends Comparable<E>> implements AbstractQueue<E> 
         if (queue.isEmpty()) {
             return null;
         }
-
         E root = queue.get(0);
         int lastIndex = queue.size() - 1;
         Collections.swap(queue, 0, lastIndex);
         queue.remove(lastIndex);
-
         heapifyDown(0);
-
         return root;
     }
 
@@ -66,15 +63,12 @@ public class PriorityQueue<E extends Comparable<E>> implements AbstractQueue<E> 
             int leftChildIndex = 2 * index + 1;
             int rightChildIndex = 2 * index + 2;
             int largest = index;
-
             if (leftChildIndex < size && queue.get(leftChildIndex).compareTo(queue.get(largest)) > 0) {
                 largest = leftChildIndex;
             }
-
             if (rightChildIndex < size && queue.get(rightChildIndex).compareTo(queue.get(largest)) > 0) {
                 largest = rightChildIndex;
             }
-
             if (largest != index) {
                 // Swap with the larger child
                 Collections.swap(queue, index, largest);
