@@ -34,15 +34,6 @@ public class MaxHeapBST<E extends Comparable<E>> implements AbstractHeap<E> {
         root = insert(root, element);
         size++;
     }
-
-    @Override
-    public E peek() {
-        if (root == null) {
-            return null;
-        }
-        return findMax(root).data;
-    }
-
     // Helper method to insert a new node into the BST
     private Node insert(Node node, E element) {
         if (node == null) {
@@ -59,6 +50,13 @@ public class MaxHeapBST<E extends Comparable<E>> implements AbstractHeap<E> {
         return node;
     }
 
+    @Override
+    public E peek() {
+        if (root == null) {
+            return null;
+        }
+        return findMax(root).data;
+    }
     // Helper method to find the maximum element in the BST
     private Node findMax(Node node) {
         while (node.right != null) {
