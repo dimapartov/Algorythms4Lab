@@ -3,23 +3,23 @@ package max_heap_hash_map_11;
 public class Main {
     public static void main(String[] args) {
 
-        MaxHeapHashMap<Integer> maxHeapHashMap = new MaxHeapHashMap<>();
+        CustomMaxHeap<Integer> customMaxHeap = new CustomMaxHeap<>();
 
-        maxHeapHashMap.add(3);
-        maxHeapHashMap.add(2);
-        maxHeapHashMap.add(5);
-        maxHeapHashMap.add(7);
-        maxHeapHashMap.add(1);
-        maxHeapHashMap.add(20);
-        maxHeapHashMap.add(24);
-        maxHeapHashMap.add(15);
-        maxHeapHashMap.add(9);
-        maxHeapHashMap.add(22);
+        customMaxHeap.add(3);
+        customMaxHeap.add(2);
+        customMaxHeap.add(5);
+        customMaxHeap.add(7);
+        customMaxHeap.add(1);
+        customMaxHeap.add(20);
+        customMaxHeap.add(24);
+        customMaxHeap.add(15);
+        customMaxHeap.add(9);
+        customMaxHeap.add(22);
 
-        System.out.println("Heap size: " + maxHeapHashMap.size());
+        System.out.println("Heap size: " + customMaxHeap.size());
 
-        System.out.println("Max. element: " + maxHeapHashMap.peek());
+        System.out.println("Max. element: " + customMaxHeap.peek());
 
-        System.out.println("Find random element: " + maxHeapHashMap.contains(15));
+        System.out.println("Find random element: " + customMaxHeap.contains(15));
     }
 }

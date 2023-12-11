@@ -4,12 +4,12 @@ import max_heap_linked_list.AbstractHeap;
 
 import java.util.*;
 
-public class MaxHeapHashMap<E extends Comparable<E>> implements AbstractHeap<E> {
+public class CustomMaxHeap<E extends Comparable<E>> implements AbstractHeap<E> {
 
     private List<E> heap;
     private Map<E, Integer> map;
 
-    public MaxHeapHashMap() {
+    public CustomMaxHeap() {
         this.heap = new ArrayList<>();
         this.map = new HashMap<>();
     }
