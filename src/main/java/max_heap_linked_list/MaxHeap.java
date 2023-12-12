@@ -34,11 +34,10 @@ public class MaxHeap<E extends Comparable<E>> implements AbstractHeap<E> {
         while (index > 0) {
             int parentIndex = (index - 1) / 2;
             if (heap.get(index).compareTo(heap.get(parentIndex)) > 0) {
-                // Swap with parent
                 swap(index, parentIndex);
                 index = parentIndex;
             } else {
-                break; // Heap property is satisfied
+                break;
             }
         }
     }

@@ -47,12 +47,11 @@ public class PriorityQueue<E extends Comparable<E>> implements AbstractQueue<E> 
     private void heapifyUp(int index) {
         while (index > 0) {
             int parentIndex = (index - 1) / 2;
-            if (queue.get(index).compareTo(queue.get(parentIndex)) > 0) {
-                // Swap with parent
+            if (queue.get(index).compareTo(queue.get(parentIndex)) > 0) {        
                 Collections.swap(queue, index, parentIndex);
                 index = parentIndex;
             } else {
-                break; // Heap property is satisfied
+                break;
             }
         }
     }
@@ -70,11 +69,10 @@ public class PriorityQueue<E extends Comparable<E>> implements AbstractQueue<E> 
                 largest = rightChildIndex;
             }
             if (largest != index) {
-                // Swap with the larger child
                 Collections.swap(queue, index, largest);
                 index = largest;
             } else {
-                break; // Heap property is satisfied
+                break; 
             }
         }
     }
