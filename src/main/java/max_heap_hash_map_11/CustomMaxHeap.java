@@ -34,10 +34,6 @@ public class CustomMaxHeap<E extends Comparable<E>> implements AbstractHeap<E> {
         return heap.get(0);
     }
 
-    public boolean contains(E element) {
-        return map.containsKey(element);
-    }
-
     private void heapifyUp(int index) {
         while (index > 0) {
             int parentIndex = (index - 1) / 2;
@@ -57,5 +53,12 @@ public class CustomMaxHeap<E extends Comparable<E>> implements AbstractHeap<E> {
 
         map.put(heap.get(i), i);
         map.put(heap.get(j), j);
+    }
+
+    public void findAndPrintElement(E element) {
+        Integer index = map.get(element);
+        if (index != null) {
+            System.out.println("Элемент найден в куче: " + element);
+        }
     }
 }

@@ -47,4 +47,10 @@ public class MaxHeap<E extends Comparable<E>> implements AbstractHeap<E> {
         heap.set(i, heap.get(j));
         heap.set(j, temp);
     }
+
+    public void findAndPrint(E element) {
+        if (heap.contains(element)) {
+            System.out.println("Элемент найден в куче: " + element);
+        }
+    }
 }
